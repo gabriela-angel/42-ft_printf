@@ -27,7 +27,7 @@ static int	handle_formats(va_list args, const char format)
 	else if (format == 'd' || format == 'i')
 		len = ft_printnbr(va_args(args, int));
 	else if (format == 'u')
-		//len = ft_putchar(va_args(args, unsigned int));
+		len = ft_printunbr(va_args(args, unsigned int));
 	else if (format == 'x' || format == 'X')
 		len = ft_printhex(va_args(args, unsigned int), format);
 	else if (format == '%')

@@ -9,10 +9,10 @@
 // Você terá que implementar as seguintes conversões:
 // DONE • %c Imprime um único caractere.
 // DONE • %s Imprime uma string (conforme definido pela convenção comum do C).
-// • %p O endereço do ponteiro void * deve ser impresso em formato hexadecimal.
+// DONE • %p O endereço do ponteiro void * deve ser impresso em formato hexadecimal.
 // DONE • %d Imprime um número decimal (base 10).
 // DONE • %i Imprime um inteiro em base 10.
-// • %u Imprime um número decimal (base 10) sem sinal.
+// DONE • %u Imprime um número decimal (base 10) sem sinal.
 // DONE • %x Imprime um número em formato hexadecimal (base 16) em minúsculas.
 // DONE • %X Imprime um número em formato hexadecimal (base 16) em maiúsculas.
 // DONE • %% Imprime um sinal de porcentagem

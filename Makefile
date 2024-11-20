@@ -11,24 +11,34 @@
 # **************************************************************************** #
 
 NAME = libftprintf.a
-SRC  = $(addprefix src, ft_printf.c)
-OBJ = 
-HEADER = includes/
+LIBFT = libft.a
+LIBFT_DIR = libft
+SRC  = $(addprefix src, ft_printf.c ft_printf_utils.c ft_printunbr.c)
+OBJ_DIR = obj
+OBJ = $(SRC:%.c=$(OBJ_DIR)/%.o)
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -I
+CFLAGS = -Wall -Werror -Wextra -Iinclude
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	@ar rcs $(NAME) $^
+$(NAME): $(LIBFT) $(OBJ_DIR) $(OBJ)
+	@ar rcs $(NAME) $(OBJ) $(LIBFT_DIR)/$(LIBFT)
 
-%.o: %.c $(HEADER)
+$(LIBFT):
+	@make -C $(LIBFT_DIR) all
+
+$(OBJ_DIR)/%.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
+$(OBJ_DIR):
+	@mkdir $@
+
 clean:
-	@rm -f $(OBJ)
+	@make -C $(LIBFT_DIR) clean
+	@rm -rf $(OBJ_DIR)
 
 fclean: clean
+	@make -C $(LIBFT_DIR) fclean
 	@rm -f $(NAME)
 
 re: fclean all

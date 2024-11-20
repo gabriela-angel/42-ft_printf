@@ -62,6 +62,6 @@ int	ft_printptr(unsigned long ptr)
 	if (ptr == 0)
 		return (write(1, "(nil)", 5));
 	len += write(1, "0x", 2);
-	len += ft_printhex(ptr, 'p');
+	len += ft_printhex(ptr, 'x');
 	return (len);
 }
