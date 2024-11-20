@@ -6,13 +6,14 @@
 /*   By: gangel-a <gangel-a@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 16:57:26 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/11/18 16:57:26 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/11/19 16:36:05 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+# include <stdarg.h>
 # include <unistd.h>
 
 
