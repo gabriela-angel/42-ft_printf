@@ -6,11 +6,12 @@
 /*   By: gangel-a <gangel-a@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/20 16:03:04 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/11/20 16:03:04 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/11/21 15:19:23 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 static int	numlen(unsigned int n)
 {

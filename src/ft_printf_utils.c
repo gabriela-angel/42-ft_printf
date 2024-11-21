@@ -6,7 +6,7 @@
 /*   By: gangel-a <gangel-a@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/19 18:29:53 by gangel-a          #+#    #+#             */
-/*   Updated: 2024/11/19 21:53:40 by gangel-a         ###   ########.fr       */
+/*   Updated: 2024/11/21 16:15:55 by gangel-a         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	ft_printstr(char *s)
 {
 	int	len;
 
+	if (!s)
+		return (ft_printstr("(null)"));
 	len = ft_strlen(s);
 	ft_putstr_fd(s, 1);
 	return (len);
@@ -43,13 +45,13 @@ int	ft_printhex(unsigned long n, char c)
 	char	*hex;
 	char	hex_no;
 
-	*hex = "0123456789abcdef";
+	hex = "0123456789abcdef";
 	len = 0;
 	if (n >= 16)
 		len += ft_printhex(n / 16, c);
 	hex_no = hex[n % 16];
 	if (c == 'X')
-		ft_toupper(hex_no);
+		hex_no = (char)ft_toupper(hex_no);
 	len += write(1, &hex_no, 1);
 	return (len);
 }
